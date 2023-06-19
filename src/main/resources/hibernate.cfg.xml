@@ -13,6 +13,7 @@
         
         <property name="hibernate.hbm2ddl.auto">update</property>
         
-        <mapping class = "com.inti.model.produit"/>
+        <mapping class = "com.inti.model.Produit"/>
+        <mapping class = "com.inti.model.Magasin"/>
     </session-factory>
 </hibernate-configuration>

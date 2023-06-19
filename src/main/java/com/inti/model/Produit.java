@@ -23,11 +23,11 @@ public class Produit {
 	private double prix;
 	private double poids;
 	
-//	@ManyToMany
-//	@JoinTable(name = "Magasin_Produit",
-//				joinColumns = @JoinColumn(name = "idProduit"),
-//				inverseJoinColumns = @JoinColumn(name = "idMagasin"))
-//	List<Magasin> listeMagasin;
+	@ManyToMany
+	@JoinTable(name = "Magasin_Produit",
+				joinColumns = @JoinColumn(name = "idProduit"),
+				inverseJoinColumns = @JoinColumn(name = "idMagasin"))
+	List<Magasin> listeMagasin;
 	
 	public Produit() {
 		super();
@@ -81,13 +81,13 @@ public class Produit {
 		this.poids = poids;
 	}
 
-//	public List<Magasin> getListeMagasin() {
-//		return listeMagasin;
-//	}
-//
-//	public void setListeMagasin(List<Magasin> listeMagasin) {
-//		this.listeMagasin = listeMagasin;
-//	}
+	public List<Magasin> getListeMagasin() {
+		return listeMagasin;
+	}
+
+	public void setListeMagasin(List<Magasin> listeMagasin) {
+		this.listeMagasin = listeMagasin;
+	}
 
 	@Override
 	public String toString() {
